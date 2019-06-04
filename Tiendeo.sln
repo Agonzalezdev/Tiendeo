@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tiendeo.APP", "Tiendeo\Tiendeo.APP.csproj", "{3766DB1B-6056-49C3-9664-20654BE30CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiendeo.DAL", "Tiendeo.DAL\Tiendeo.DAL.csproj", "{4954EAA0-6F99-4C36-A5EF-0955B53F64C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiendeo.BLL", "Tiendeo.BLL\Tiendeo.BLL.csproj", "{B8F61DA8-0310-4E8A-B3B9-49A774615F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiendeo.API", "Tiendeo.API\Tiendeo.API.csproj", "{B0A1D345-FAF4-4C1F-B439-1420BB3C758A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3766DB1B-6056-49C3-9664-20654BE30CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3766DB1B-6056-49C3-9664-20654BE30CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3766DB1B-6056-49C3-9664-20654BE30CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3766DB1B-6056-49C3-9664-20654BE30CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4954EAA0-6F99-4C36-A5EF-0955B53F64C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4954EAA0-6F99-4C36-A5EF-0955B53F64C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4954EAA0-6F99-4C36-A5EF-0955B53F64C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4954EAA0-6F99-4C36-A5EF-0955B53F64C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F61DA8-0310-4E8A-B3B9-49A774615F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F61DA8-0310-4E8A-B3B9-49A774615F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F61DA8-0310-4E8A-B3B9-49A774615F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F61DA8-0310-4E8A-B3B9-49A774615F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A1D345-FAF4-4C1F-B439-1420BB3C758A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A1D345-FAF4-4C1F-B439-1420BB3C758A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A1D345-FAF4-4C1F-B439-1420BB3C758A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A1D345-FAF4-4C1F-B439-1420BB3C758A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30130235-64D3-4FC3-9DE1-CD29BF661596}
+	EndGlobalSection
+EndGlobal
