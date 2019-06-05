@@ -13,6 +13,7 @@ namespace Tiendeo.DAL
         public DbSet<Province> Province { get; set; }
         public DbSet<Service> Service { get; set; }
         public DbSet<Store> Store { get; set; }
+        public DbSet<Enterprise> Enterprise { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

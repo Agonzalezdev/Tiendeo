@@ -16,5 +16,6 @@ namespace Tiendeo.DAL
         DbSet<Province> Province { get; set; }
         DbSet<Service> Service { get; set; }
         DbSet<Store> Store { get; set; }
+        DbSet<Enterprise> Enterprise { get; set; }
     }
 }

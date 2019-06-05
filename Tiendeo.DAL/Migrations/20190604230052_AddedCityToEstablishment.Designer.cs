@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tiendeo.DAL;
 
 namespace Tiendeo.DAL.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20190604230052_AddedCityToEstablishment")]
+    partial class AddedCityToEstablishment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,25 +41,6 @@ namespace Tiendeo.DAL.Migrations
                     b.HasIndex("ProvinceId");
 
                     b.ToTable("City");
-                });
-
-            modelBuilder.Entity("Tiendeo.DAL.Entities.Enterprise", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("MarkerUrl")
-                        .IsRequired();
-
-                    b.Property<string>("Name")
-                        .IsRequired();
-
-                    b.Property<int>("Top");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Enterprise");
                 });
 
             modelBuilder.Entity("Tiendeo.DAL.Entities.Establishment", b =>
@@ -114,14 +97,10 @@ namespace Tiendeo.DAL.Migrations
                 {
                     b.HasBaseType("Tiendeo.DAL.Entities.Establishment");
 
-                    b.Property<long>("EnterpriseId");
-
                     b.Property<string>("Name")
                         .IsRequired();
 
                     b.Property<int>("Top");
-
-                    b.HasIndex("EnterpriseId");
 
                     b.HasDiscriminator().HasValue("Store");
                 });
@@ -138,14 +117,6 @@ namespace Tiendeo.DAL.Migrations
                     b.HasOne("Tiendeo.DAL.Entities.City", "City")
                         .WithMany()
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Tiendeo.DAL.Entities.Store", b =>
-                {
-                    b.HasOne("Tiendeo.DAL.Entities.Enterprise", "Enterprise")
-                        .WithMany()
-                        .HasForeignKey("EnterpriseId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

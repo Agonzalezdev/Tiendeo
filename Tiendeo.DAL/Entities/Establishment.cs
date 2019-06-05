@@ -11,5 +11,7 @@ namespace Tiendeo.DAL.Entities
         public double Longitude { get; set; }
         [Required]
         public string Address { get; set; }
+        [Required]
+        public virtual City City { get; set; }
     }
 }

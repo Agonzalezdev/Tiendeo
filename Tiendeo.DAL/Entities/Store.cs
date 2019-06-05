@@ -8,5 +8,8 @@ namespace Tiendeo.DAL.Entities
         public string Name { get; set; }
 
         public int Top { get; set; }
+
+        [Required]
+        public virtual Enterprise Enterprise { get; set; }
     }
 }
