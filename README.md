@@ -5,6 +5,7 @@ _GUIA_
 -La URL base de la api se modifica en el archivo **environment/environment.ts**\
 -La API Key de Google Maps se modifica en el archivo **environment/environment.ts**\
 -Es **necesario** para el funcionamiento de la aplicación que se descargen todos los paquetes de NuGet\
+-Es **necesario** para el funcionamiento de la aplicación que se establezca el proyecto de **API** como StartUp Project\
 -Es **necesario** para el funcionamiento de la app que se ejecuten todas las **migraciones** en la base de datos que genera EntityFramework\
 -Es **necesario** para el funcionamiento de la app que se ejecute el archivo **Tiendeo.DAL/Scripts/BasicData.sql** que incluye los datos de la aplicación.\
 -Para ejecutar la APP de angular hay que ir a Tiendeo/App y ejecutar en un CMD los comandos: \
