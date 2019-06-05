@@ -34,13 +34,13 @@ _REQUERIMIENTOS_DE_LA_PRUEBA_
 _API_   
 Tanto los métodos que se han pedido específicamente como los que se describen abajo se pueden consultar y probar en Swagger.
 1. Lista completa de las tiendas ordenadas por importancia.\
-**/api/stores/top**\
+**/api/stores/top**
 2. La tienda más cercana a las coordenadas de un usuario.\
-**/api/stores/near/top?latitude=XXXX&longitude=YYYY**\
+**/api/stores/near/top?latitude=XXXX&longitude=YYYY**
 3. Crear un endpoint que devuelva las X primeras tiendas ordenadas respecto a la distancia del usuario.\
-**/api/stores/near?latitude=XXXXX&longitude=YYYYY&maxResults=15**\
+**/api/stores/near?latitude=XXXXX&longitude=YYYYY&maxResults=15**
 4. Crear un endpoint que devuelva todos los servicios de una ciudad\
-**/api/services-by-city/2**\
+**/api/services-by-city/2**
 
 _BBDD_
 1. Escribir una query que devuelva todos los servicios de tipo cajero
