@@ -1,27 +1,35 @@
-<h1>{{ title }}</h1>
+<h1>Demo Tiendeo Angular 7 + .NET Core API</h1>
 
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" id="main-map">
+<agm-map [latitude]="mapLatitude" [longitude]="mapLongitude" [zoom]="defaultZoom" id="main-map" (idle)="loadStoreData()" #map>
   <agm-marker *ngFor="let marker of markers"
-              [latitude]="marker.lat"
-              [longitude]="marker.lng"              
-              [opacity]="1"              
+              [latitude]="marker.latitude"
+              [longitude]="marker.longitude"
+              [opacity]="1"
               [iconUrl]="
                 {
-                  url: marker.iconUrl,
+                  url: marker.enterpriseMarkerUrl,
                   scaledSize: {
                       width: mapIconDefaultWidth,
                       height: mapIconDefaultHeigth
                   }
               }"
-              [markerDraggable]="true">
+              [markerDraggable]="false"
+              >
   </agm-marker>
-  <!--<agm-rectangle [north]="max('lat')"
-                 [east]="max('lng')"
-                 [south]="min('lat')"
-                 [west]="min('lng')">
-  </agm-rectangle>-->
 </agm-map>
+
+<div id="map-tools">
+  <mat-form-field *ngIf="allCities">
+    <mat-label>Ciudad</mat-label>
+    <mat-select [(ngModel)]="selectedCity" (selectionChange)="cityChanged()">
+      <mat-option *ngFor="let city of allCities" [value]="city.id">
+        {{city.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Tiendas a mostrar" [(ngModel)]="storeSearch.maxResults" (change)="loadStoreData()">
+  </mat-form-field>
+</div>
 
 <router-outlet></router-outlet>
