@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Tiendeo.API.ViewModels;
 using Tiendeo.BLL.DTO;
+using Tiendeo.BLL.Exceptions;
 using Tiendeo.BLL.Services;
 using Tiendeo.Shared.Classes;
 
@@ -39,6 +40,10 @@ namespace Tiendeo.API.Controllers
                 List<ServiceDTO> stores = _serviceService.SearchServices(cityId.Value);
                 List<ServiceViewModel> mappedStores = _Mapper.Map<List<ServiceViewModel>>(stores);
                 return Ok(mappedStores);
+            }
+            catch(CityDoesNotExistException ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
             catch (Exception ex)
             {

@@ -42,7 +42,7 @@ namespace Tiendeo.BLL.Services
                                     e.Longitude > locationWrapper.ToLongitude
                             ).OrderBy(e => e.Top).ToList();
                 else
-                    _storeRepository.Get(_context).OrderBy(e => e.Top).ToList();
+                    stores = _storeRepository.Get(_context).OrderBy(e => e.Top).ToList();
 
                 if (maxResults != null)
                     stores = stores.Take(maxResults.Value).ToList();
