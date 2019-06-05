@@ -10,6 +10,8 @@ namespace Tiendeo.API.Config
         {
             CreateMap<StoreDTO, StoreViewModel>();
             CreateMap<CityDTO, CityViewModel>();
+            CreateMap<ServiceDTO, ServiceViewModel>();
+            
         }
     }
 }

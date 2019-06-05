@@ -8,6 +8,6 @@ namespace Tiendeo.BLL.Services
 {
     public interface IServiceService
     {
-        List<ServiceDTO> SearchServices(LocationWrapper locationWrapper);
+        List<ServiceDTO> SearchServices(long cityId);
     }
 }

@@ -28,11 +28,11 @@ namespace Tiendeo.BLL.Services
             _Mapper = mapper;
         }
 
-        public List<ServiceDTO> SearchServices(LocationWrapper locationWrapper)
+        public List<ServiceDTO> SearchServices(long cityId)
         {
             try
             {
-                List<Service> services = _serviceRepository.Get(_context).ToList();
+                List<Service> services = _serviceRepository.Get(_context, e => e.City.Id == cityId).ToList();
                 return _Mapper.Map<List<ServiceDTO>>(services);
             }
             catch (Exception ex)
