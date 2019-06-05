@@ -1,0 +1,35 @@
+<h1>Demo Tiendeo Angular 7 + .NET Core API</h1>
+
+<agm-map [latitude]="mapLatitude" [longitude]="mapLongitude" [zoom]="defaultZoom" id="main-map" (idle)="loadStoreData()" #map>
+  <agm-marker *ngFor="let marker of markers"
+              [latitude]="marker.latitude"
+              [longitude]="marker.longitude"
+              [opacity]="1"
+              [iconUrl]="
+                {
+                  url: marker.enterpriseMarkerUrl,
+                  scaledSize: {
+                      width: mapIconDefaultWidth,
+                      height: mapIconDefaultHeigth
+                  }
+              }"
+              [markerDraggable]="false"
+              >
+  </agm-marker>
+</agm-map>
+
+<div id="map-tools">
+  <mat-form-field *ngIf="allCities">
+    <mat-label>Ciudad</mat-label>
+    <mat-select [(ngModel)]="selectedCity" (selectionChange)="cityChanged()">
+      <mat-option *ngFor="let city of allCities" [value]="city.id">
+        {{city.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Tiendas a mostrar" [(ngModel)]="storeSearch.maxResults" (change)="loadStoreData()" type="number">
+  </mat-form-field>
+</div>
+
+<router-outlet></router-outlet>
