@@ -5,7 +5,7 @@ _GUIA_
 -La URL base de la api se modifica en el archivo **environment/environment.ts**\
 -La API Key de Google Maps se modifica en el archivo **environment/environment.ts**\
 -Es **necesario** para el funcionamiento de la aplicación que se descargen todos los paquetes de NuGet\
--Es **necesario** para el funcionamiento de la app que se ejecuten todas las **migraciones** en la base de datos que genera \EntityFramework
+-Es **necesario** para el funcionamiento de la app que se ejecuten todas las **migraciones** en la base de datos que genera EntityFramework\
 -Es **necesario** para el funcionamiento de la app que se ejecute el archivo **Tiendeo.DAL/Scripts/BasicData.sql** que incluye los datos de la aplicación.\
 -Para ejecutar la APP de angular hay que ir a Tiendeo/App y ejecutar en un CMD los comandos: \
 	-**npm install** ( para la instalación de todos los paquetes necesarios ) \
@@ -19,15 +19,15 @@ En caso de que se quiera incluir en el proyecto, con comunicarmelo será suficie
 En el caso de los **Logs**, utilizaría nLog, con la configuración del mismo en el appsettings.json del proyecto de API. Se crearía un proyecto nuevo con la definición e implementación del Logger.
 En todos los controladores, servicios y repositorios se inyetaría mediante DI este logger, y en cada entrada de método y excepción, se logearía la información necesaria.
 
-En el caso de la **API Security**, se implementaría un **MiddleWare** que interceptaría cada llamada a la API, y comprobaría que esta clave es correcta.
+En el caso de la **API Security**, se implementaría un **MiddleWare** que interceptaría cada llamada a la API, y comprobaría que esta clave es correcta.\
 
-Los test, solo he desarrollado los de la **BLL** y de una manera simple, para que se controlen los pocos métodos que tiene la capa de servicios.
+Los test, solo he desarrollado los de la **BLL** y de una manera simple, para que se controlen los pocos métodos que tiene la capa de servicios.\
 
 
 _OTROS_
--La aplicación disponer de **Swagger** para consultar y probar las distintas llamadas a la **API**
--El mapa de google va realizando llamadas a la API cada vez que recibe un cambio de posición o zoom, en esta llamada se envian las coordenadas que forman el area que muestra el mapa, y un parámetro que indica cuantas tiendas va a mostrar como máximo
--Se pueden modificar tanto la ciudad como el número de resultados desde la vista, y se verán los cambios en tiempo real
+-La aplicación disponer de **Swagger** para consultar y probar las distintas llamadas a la **API**\
+-El mapa de google va realizando llamadas a la API cada vez que recibe un cambio de posición o zoom, en esta llamada se envian las coordenadas que forman el area que muestra el mapa, y un parámetro que indica cuantas tiendas va a mostrar como máximo\
+-Se pueden modificar tanto la ciudad como el número de resultados desde la vista, y se verán los cambios en tiempo real\
 
 _REQUERIMIENTOS_DE_LA_PRUEBA_
 _API_   
