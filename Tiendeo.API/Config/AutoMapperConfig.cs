@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Tiendeo.API.ViewModels;
+using Tiendeo.BLL.DTO;
 
 namespace Tiendeo.API.Config
 {
@@ -6,7 +8,8 @@ namespace Tiendeo.API.Config
     {
         public AutoMapperConfig()
         {
-            //CreateMap<UserCreationWrapper, UserViewModel>();
+            CreateMap<StoreDTO, StoreViewModel>();
+            CreateMap<CityDTO, CityViewModel>();
         }
     }
 }

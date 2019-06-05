@@ -38,7 +38,7 @@ namespace Tiendeo.API
         {
 
             services.AddOptions();
-
+            services.AddRouting(options => options.LowercaseUrls = true);
             services.AddDbContext<Context>(
                 option => option.UseSqlServer(Configuration.GetConnectionString("Main"))
                 ).AddUnitOfWork<Context>();

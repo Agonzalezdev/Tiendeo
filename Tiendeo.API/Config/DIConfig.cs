@@ -11,6 +11,7 @@ namespace Tiendeo.API.Config
         {
             services.AddScoped<IServiceService, ServiceService>();
             services.AddScoped<IStoreService, StoreService>();
+            services.AddScoped<ICityService, CityService>();
             
             services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<ICityRepository, CityRepository>();
@@ -21,6 +22,7 @@ namespace Tiendeo.API.Config
             services.AddSingleton(new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new AutoMapperConfig());
+                mc.AddProfile(new BLL.Config.AutoMapperConfig());
             }).CreateMapper());
         }
     }

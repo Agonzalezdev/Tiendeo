@@ -13,10 +13,12 @@
     <PackageReference Include="AutoMapper" Version="8.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.UnitOfWork" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tiendeo.BLL\Tiendeo.BLL.csproj" />
     <ProjectReference Include="..\Tiendeo.DAL\Tiendeo.DAL.csproj" />
   </ItemGroup>
 
@@ -50,6 +52,10 @@
     <TypeScriptSourceMap>True</TypeScriptSourceMap>
     <TypeScriptMapRoot />
     <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Configuration|AnyCPU'">
+    <DocumentationFile>C:\Users\Alex\Documents\Tiendeo\Tiendeo.API\Tiendeo.API.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
