@@ -1,15 +1,15 @@
 # Tiendeo
 _GUIA_
--Es necesario disponer de un **SQL Server**, de **NPM** y de **Angular CLI** instalado para poder ejecutarlo.
--La ConnectionString se modifica en **appsettings.json** del proyecto **Tiendeo.API**
--La URL base de la api se modifica en el archivo **environment/environment.ts**
--La API Key de Google Maps se modifica en el archivo **environment/environment.ts**
--Es **necesario** para el funcionamiento de la aplicación que se descargen todos los paquetes de NuGet
--Es **necesario** para el funcionamiento de la app que se ejecuten todas las **migraciones** en la base de datos que genera EntityFramework
--Es **necesario** para el funcionamiento de la app que se ejecute el archivo **Tiendeo.DAL/Scripts/BasicData.sql** que incluye los datos de la aplicación.
--Para ejecutar la APP de angular hay que ir a Tiendeo/App y ejecutar en un CMD los comandos: 
-	-**npm install** ( para la instalación de todos los paquetes necesarios ) 
-	-**npm start** ( para arrancar la aplicación, por defecto se lanza en http://localhost:4200 ) 
+-Es necesario disponer de un **SQL Server**, de **NPM** y de **Angular CLI** instalado para poder ejecutarlo.\
+-La ConnectionString se modifica en **appsettings.json** del proyecto **Tiendeo.API**\
+-La URL base de la api se modifica en el archivo **environment/environment.ts**\
+-La API Key de Google Maps se modifica en el archivo **environment/environment.ts**\
+-Es **necesario** para el funcionamiento de la aplicación que se descargen todos los paquetes de NuGet\
+-Es **necesario** para el funcionamiento de la app que se ejecuten todas las **migraciones** en la base de datos que genera \EntityFramework
+-Es **necesario** para el funcionamiento de la app que se ejecute el archivo **Tiendeo.DAL/Scripts/BasicData.sql** que incluye los datos de la aplicación.\
+-Para ejecutar la APP de angular hay que ir a Tiendeo/App y ejecutar en un CMD los comandos: \
+	-**npm install** ( para la instalación de todos los paquetes necesarios ) \
+	-**npm start** ( para arrancar la aplicación, por defecto se lanza en http://localhost:4200 ) \
 
 _NOTA_
 **Importante**: Para poder entregar la prueba a la mayor brevedad, he omitido algo básico en cualquier proyecto, que son los Logs y la seguridad.
