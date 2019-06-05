@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Tiendeo.BLL.Services;
 using Tiendeo.DAL.Repositories;
 
 namespace Tiendeo.API.Config
@@ -13,14 +9,14 @@ namespace Tiendeo.API.Config
     {
         public static void Setup(IServiceCollection services)
         {
-            //SERV
-            //services.AddScoped<IUserService, UserService>();
-
+            services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IStoreService, StoreService>();
             
             services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<IProvinceRepository, ProvinceRepository>();
-            services.AddScoped<IServiceRepository, ServiceRepository>();
+            services.AddScoped<IStoreRepository, StoreRepository>();
+            services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();
 
             services.AddSingleton(new MapperConfiguration(mc =>
             {
