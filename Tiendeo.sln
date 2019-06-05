@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tiendeo.BLL", "Tiendeo.BLL\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tiendeo.API", "Tiendeo.API\Tiendeo.API.csproj", "{B0A1D345-FAF4-4C1F-B439-1420BB3C758A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiendeo.Shared", "Tiendeo.Shared\Tiendeo.Shared.csproj", "{E5FF5FF0-46C2-4B11-884F-E988775A3BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tiendeo.Shared", "Tiendeo.Shared\Tiendeo.Shared.csproj", "{E5FF5FF0-46C2-4B11-884F-E988775A3BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiendeo.BLL.Test", "Tiendeo.BLL.Test\Tiendeo.BLL.Test.csproj", "{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,12 @@ Global
 		{E5FF5FF0-46C2-4B11-884F-E988775A3BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5FF5FF0-46C2-4B11-884F-E988775A3BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5FF5FF0-46C2-4B11-884F-E988775A3BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}.Configuration|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}.Configuration|Any CPU.Build.0 = Debug|Any CPU
+		{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BEE6A1-79CA-4224-A3D3-E2CCEB4158B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
