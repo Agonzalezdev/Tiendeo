@@ -7,6 +7,6 @@ namespace Tiendeo.BLL.Services
 {
     public interface IStoreService
     {
-        List<StoreDTO> SearchStores(LocationWrapper locationWrapper);
+        List<StoreDTO> SearchStores(LocationWrapper locationWrapper, long? maxResults);
     }
 }

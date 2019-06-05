@@ -28,7 +28,7 @@ namespace Tiendeo.API.Controllers
 
 
         [HttpGet("stores")]
-        public ActionResult<List<StoreViewModel>> Search([FromQuery]LocationWrapper locationWrapper, long maxResults)
+        public ActionResult<List<StoreViewModel>> Search([FromQuery]LocationWrapper locationWrapper, long? maxResults)
         {
             try
             {

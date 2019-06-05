@@ -27,7 +27,7 @@ namespace Tiendeo.BLL.Services
             _Mapper = mapper;
         }
 
-        public List<StoreDTO> SearchStores(LocationWrapper locationWrapper)
+        public List<StoreDTO> SearchStores(LocationWrapper locationWrapper, long? maxResults)
         {
             try
             {
@@ -37,7 +37,11 @@ namespace Tiendeo.BLL.Services
                         e.Latitude > locationWrapper.ToLatitude &&
                         e.Longitude < locationWrapper.FromLongitude &&
                         e.Longitude > locationWrapper.ToLongitude 
-                    ).ToList();
+                    ).OrderBy(e => e.Top).ToList();
+
+                if (maxResults != null)
+                    stores = stores.Take((int)maxResults).ToList();
+
                 return _Mapper.Map<List<StoreDTO>>(stores);
             }
             catch (Exception ex)
