@@ -15,14 +15,14 @@ _GUIA_\
 _NOTA_
 **Importante**: Para poder entregar la prueba a la mayor brevedad, he omitido algo básico en cualquier proyecto, que son los Logs y la seguridad.
 Solo dejar constancia de que es algo que se hacer ( lo he implementado en todos los proyectos que he desarrollado ), pero debido a que es una prueba de código, no he visto necesario implementarlo.
-En caso de que se quiera incluir en el proyecto, con comunicarmelo será suficiente para que lo implemente en el proyecto.
+En caso de que se quiera incluir en el proyecto, con comunicarmelo será suficiente para implementarlo.
 
 En el caso de los **Logs**, utilizaría nLog, con la configuración del mismo en el appsettings.json del proyecto de API. Se crearía un proyecto nuevo con la definición e implementación del Logger.
-En todos los controladores, servicios y repositorios se inyetaría mediante DI este logger, y en cada entrada de método y excepción, se logearía la información necesaria.
+En todos los controladores, servicios y repositorios se inyectaría mediante DI este logger, y en cada entrada de método y excepción, se logearía la información necesaria.
 
-En el caso de la **API Security**, se implementaría un **MiddleWare** que interceptaría cada llamada a la API, y comprobaría que esta clave es correcta.\
+En el caso de la **API Security**, se implementaría un **MiddleWare** que interceptaría cada llamada a la API, y comprobaría que esta clave es correcta.
 
-Los test, solo he desarrollado los de la **BLL** y de una manera simple, para que se controlen los pocos métodos que tiene la capa de servicios.\
+Los test, solo he desarrollado los de la **BLL** y de una manera simple, para que se controlen los pocos métodos que tiene la capa de servicios.
 
 
 _OTROS_
