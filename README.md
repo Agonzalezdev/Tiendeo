@@ -1,5 +1,5 @@
 # Tiendeo
-_GUIA_
+_GUIA_/
 -Es necesario disponer de un **SQL Server**, de **NPM** y de **Angular CLI** instalado para poder ejecutarlo.\
 -La ConnectionString se modifica en **appsettings.json** del proyecto **Tiendeo.API**\
 -La URL base de la api se modifica en el archivo **environment/environment.ts**\
